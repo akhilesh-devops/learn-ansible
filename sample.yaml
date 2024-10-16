@@ -1,4 +1,4 @@
-- name: Sample
+- name: sample playbook
   hosts: localhost
   connection: local
   become: true
@@ -11,3 +11,10 @@
       ansible.builtin.systemd:
         name: nginx
         state: started
+
+- name: roles playbook
+  hosts: localhost
+  connections: local
+  become: true
+  roles:
+    - sample
