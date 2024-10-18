@@ -1,16 +1,17 @@
-- name: learn conditions
+- name: Demo on conditions
   hosts: all
   connection: local
   vars:
-    Fruit: true
-    Vegetable: false
-  tasks:
-    - name: print Fruit Name
-      ansible.builtin.debug:
-        msg: Fruit Name is Apple
-      when: Fruit is defined
+    fruit: true
+    vegetable: false
 
-    - name: print Vegetable Name
+  tasks:
+    - name: Print Fruit Name
       ansible.builtin.debug:
-        msg: Vegetable Name is Carrot
-      when: Vegetable is defined
+        msg: Fruit Name - Apple
+      when: fruit is true
+
+    - name: Print Vegetable Name
+      ansible.builtin.debug:
+        msg: Vegetable Name - Carrot
+      when: vegetable is true
