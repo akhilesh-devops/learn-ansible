@@ -1,0 +1,15 @@
+- name: learn conditions
+  hosts: all
+  connection: local
+  vars:
+    Fruit: true
+    Vegetable: false
+  tasks:
+    - name: print Fruit Name
+      ansible.builtin.debug:
+        msg: Fruit Name is Apple
+      when: Fruit is defined
+    - name: print Vegetable Name
+      ansible.builtin.debug:
+        msg: Vegetable Name is Carrot
+      when: Vegetable is defined
