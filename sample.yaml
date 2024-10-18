@@ -10,11 +10,5 @@
     - name: Restart Nginx
       ansible.builtin.systemd:
         name: nginx
-        state: started
-
-- name: roles playbook
-  hosts: localhost
-  connections: local
-  become: true
-  roles:
-    - sample
+        state: restarted
+        enabled: true
