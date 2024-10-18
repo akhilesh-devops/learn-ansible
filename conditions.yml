@@ -9,6 +9,7 @@
       ansible.builtin.debug:
         msg: Fruit Name is Apple
       when: Fruit is defined
+
     - name: print Vegetable Name
       ansible.builtin.debug:
         msg: Vegetable Name is Carrot
