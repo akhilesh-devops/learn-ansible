@@ -1,12 +1,13 @@
-- name: sample playbook
-  hosts: localhost
+- name: Webserver setup
+  hosts: all
   connection: local
   become: true
   tasks:
     - name: Install Nginx
       ansible.builtin.yum:
         name: nginx
-        state: latest
+        state: installed
+
     - name: Restart Nginx
       ansible.builtin.systemd:
         name: nginx
