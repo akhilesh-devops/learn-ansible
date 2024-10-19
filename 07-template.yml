@@ -3,9 +3,9 @@
   connection: local
   vars:
     fruit_name:
-      - apple
-      - orange
-      - banana
+      - pineapple
+      - keer
+      - sweet
   tasks:
     - name: Demo on template
       ansible.builtin.template:
