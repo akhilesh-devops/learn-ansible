@@ -1,9 +1,9 @@
-- name: Demo on template
+- name: Template Demo
   hosts: localhost
   connection: local
   vars:
-    fruit_name: Apple
+    fruit_name: apple
   tasks:
-    ansible.builtin.template:
-      src: test.txt
-      dest: /tmp/test.txt
+    - ansible.builtin.template:
+        src: test.txt
+        dest: /tmp/test.txt
