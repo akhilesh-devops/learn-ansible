@@ -4,8 +4,12 @@
   vars:
     URL: play.google.com
   tasks:
-    - name: Print Message
+    - name: Print Message for Task variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
       vars:
         URL: tasks.google.com
+
+    - name: Print Message for Play variable
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
