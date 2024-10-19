@@ -1,5 +1,5 @@
 - name: Webserver setup
-  hosts: all
+  hosts: localhost
   connection: local
   become: true
   tasks:
