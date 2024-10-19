@@ -1,0 +1,9 @@
+- name: print play variable
+  ansible.builtin.debug:
+    msg: URL = {{ URL }}
+
+- name: print task variable
+  ansible.builtin.debug:
+    msg: URL = {{ URL }}
+  vars:
+    URL: tasks.google.com

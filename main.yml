@@ -1,0 +1,5 @@
+- name: Demo on variable precedence
+  hosts: localhost
+  connection: local
+  roles:
+    - sample
