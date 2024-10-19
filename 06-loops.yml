@@ -10,12 +10,12 @@
     - name: Print fruit name
       ansible.builtin.debug:
         msg: Fruit Name is {{ item }}
-      loops: "{{ fruits }}"
+      loop: "{{ fruits }}"
 
     - name: Print vegetable name
       ansible.builtin.debug:
         msg: Vegetable Name is {{ item }}
-      loops:
+      loop:
         - kiwi
         - tomato
         - ginger
@@ -23,6 +23,6 @@
     - name: Print Message
       ansible.builtin.debug:
         msg: Fruit Name - {{ item.fruit }}, Quantity - {{ item.quantity }}, Color is {{ item.color }}
-      loops:
+      loop:
         - { fruit: "mango", quantity: 150, color: "Red" }
         - { fruit: "tomato", quantity: 200, color: "pink" }
