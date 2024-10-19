@@ -2,9 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    fruit_name:
-      - Apple
-      - Banana
+    fruit_name: "Apple"
   tasks:
     - name: Print Fruit Name
       ansible.builtin.template:
