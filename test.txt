@@ -1,1 +1,1 @@
-Fruit_name: {{ item.fruit_name }}
+Fruit_name: {{ fruit_name }}
