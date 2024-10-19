@@ -7,3 +7,5 @@
     - name: Print Message
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+      vars:
+        URL: tasks.google.com
