@@ -1,7 +1,7 @@
-- name: Demo on parameter store
+- name: Demo for AWS Patameter store
   hosts: localhost
   connection: local
   tasks:
-    - name: print parameter value
+    - name: fetch some value
       ansible.builtin.debug:
-        msg: "{{ lookup('amazon.aws.aws_ssm', 'docdb.dev.master_username', region='us-east-1') }}"
+        msg: "{{ lookup('amazon.aws.aws_ssm', 'rds.dev.database_name', region='us-east-1') }}"
