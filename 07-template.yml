@@ -1,10 +1,10 @@
-- name: demo on template
+- name: Demo on Template
   hosts: localhost
   connection: local
   vars:
-    fruit_name: ["apple", "orange", "banana"]
+    Employee_id: "2223342"
   tasks:
-    - name: Demo on Template
+    - name: Print Employee ID
       ansible.builtin.template:
         src: test.txt
         dest: /tmp/test.txt
