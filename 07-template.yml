@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    Employee_id: "2223342"
+    Employee_id: 2223342
   tasks:
     - name: Print Employee ID
       ansible.builtin.template:
